@@ -216,7 +216,12 @@ public class Collection {
 			System.out.print("*End of list");
 		}
 	}
-	
+	/**
+	 * Checks if there are no albums in the albums array
+	 * 
+	 * 
+	 * @return True if there are no albums, false if there are albums
+	 */
 	public boolean isEmpty() {
 		if (numAlbums == 0) {
 			return true;
@@ -224,7 +229,12 @@ public class Collection {
 		
 		return false;
 	}
-	
+	/**
+	 * Checks if the albums array is null and returns the length if it isn't
+	 * 
+	 * 
+	 * @return 0 if the albums array is null, length of the albums array if it isn't null
+	 */
 	public int length() {
 		if (albums == null) {
 			return 0;
@@ -232,7 +242,12 @@ public class Collection {
 		
 		 return albums.length;
 	}
-	
+	/**
+	 * Retrieves the albums list
+	 * 
+	 * 
+	 * @return the albums array
+	 */
 	public Album[] getAlbums() {
 		return albums;
 	}
