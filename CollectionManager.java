@@ -4,7 +4,14 @@ import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class CollectionManager {
-
+	/**
+	 * The CollectionManager class is used to run methods in the Album, Collection, and Date class. 
+	 * 
+	 * Holds the run method  which takes in user input constantly. Depending on the input, 
+	 * it accesses methods from the aforementioned classes to follow the user command
+	 * 
+	 * @author Rohit Krishnan, Moses Devanesan
+	 */
 	Scanner userin = new Scanner(System.in);
 	String[] user_input = new String[5];
 	String command = null;
@@ -34,7 +41,12 @@ public class CollectionManager {
 		
 		return false;
 	}
-
+	/**
+	 * Finds the album from the albums array
+	 * 
+	 * @parameters title and artist
+	 * @return the index of the album, null if there is no album
+	 */
 	public Album findAlbum(String title, String artist) {
 		for (int i = 0; i < albumList.getAlbums().length; i++) {
 			if (albumList.getAlbums()[i] != null) {
@@ -46,6 +58,12 @@ public class CollectionManager {
 		}
 		return null;
 	}
+	/**
+	 * Constantly runs and takes commands from the user
+	 * 
+	 * 
+	 * 
+	 */
 	public void run() {
 		System.out.println("Collection Manager starts running.");
 		while (0 < 1) {
