@@ -3,17 +3,13 @@ package p1;
 import java.util.StringTokenizer;
 import java.util.Calendar;
 	/**
-	 * The Collection class holds the list of albums and the methods that can be
-	 * used to edit the list.
-	 * 
-	 * The Collection class holds methods that can be used to find, add, and remove
-	 * albums in the list. It also holds methods that can be used to lend out and
-	 * return albums to the list. Finally, the Collection class holds methods that
-	 * can print the list of albums in no order, by order of date, and by order of
-	 * genre.
-	 * 
-	 * @author Rohit Krishnan, Moses Devanesan
-	 */
+     	* The Date class is used to change the dates into numbers in order to compare them.
+     	* 
+     	* The Date class holds methods in order to check the validity of the dates
+     	* as well as check the hierarchy of the different dates within the album
+     	* library in order to help us in comparison of the different dates
+     	* @author Rohit Krishnan, Moses Devanesan
+    	 */
 public class Date implements Comparable<Date> {
 	Calendar c;
 	private int year;
@@ -68,7 +64,7 @@ public class Date implements Comparable<Date> {
 	/**
 	 * Creates a date object from the user given date
 	 * 
-	 * @parameter 
+	 * @parameter the user given date
 	 * @return The year of the album
 	 */
 	public Date(String date) {
