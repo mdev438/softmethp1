@@ -1,130 +1,156 @@
+package p1;
+
 import java.util.StringTokenizer;
 import java.util.Calendar;
+
 public class Date implements Comparable<Date> {
- Calendar c;
- private int year;
- private int month;
- private int day;
- public static final int quadrennial = 4;
- public static final int centennial = 100;
- public static final int quartercentennial = 25;
- public static final int the_eightys = 1980;
- StringTokenizer splitter = new StringTokenizer(]);
- int[] datearray = new int[3];
- public Date(String date) {
-     splitter = (date);
-     for (int i=0;i<datearray.lenth;i++) {
-       datearray[i] = Integer.parseInt(splitter.nextToken("/")); 
-     }
-     month =datearray[0];
-     day = datearray[1];
-     year =datearray[2];
- } //take “mm/dd/yyyy” and create a Date object
- public Date() {
-  c.getInstance();
-  year = c.get(Calendar.YEAR);
-  month = c.get(Calendar.MONTH);
-  day = c.get(Calendar.DAY_OF_MONTH);
- } //create an object with today’s date (see Calendar class)
+	Calendar c;
+	private int year;
+	private int month;
+	private int day;
+	public static final int quadrennial = 4;
+	public static final int centennial = 100;
+	public static final int quartercentennial = 25;
+	public static final int the_eightys = 1980;
+	StringTokenizer splitter = null;
+	int[] datearray = new int[3];
+	
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	public int getMonth() {
+		return month;
+	}
+
+	public void setMonth(int month) {
+		this.month = month;
+	}
+
+	public int getDay() {
+		return day;
+	}
+
+	public void setDay(int day) {
+		this.day = day;
+	}
+
+
+	public Date(String date) {
+		splitter = new StringTokenizer(date);
+
+		for (int i = 0; i < datearray.length; i++) {
+			datearray[i] = Integer.parseInt(splitter.nextToken("/"));
+		}
+
+		month = datearray[0];
+		day = datearray[1];
+		year = datearray[2];
+	} // take “mm/dd/yyyy” and create a Date object
+
+	public Date() {
+		year = Calendar.getInstance().get(Calendar.YEAR);
+		month = Calendar.getInstance().get(Calendar.MONTH);
+		day = Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
+	} // create an object with today’s date (see Calendar class)
+
 public boolean isValid() {
 
 
 
-if (album.year< 2021) && (album.year>1980)
-switch (album.month) {
+if (year<=2021 && year>=1980)
+switch (month) {
 
-case 1 : if (album.days>0) && album.days<31)
+case 1 : if (day>0 && day<31)
             return true;
-        else return false;
          break;
 
 case 2 : boolean leap = false;
-        if (album.year%4==0) 
-            if (album.year%100=0){
-                if (album.year%400=0)
+        if (year%4==0) 
+            if (year%100==0){
+                if (year%400==0)
                     leap = true;
             }
             else leap = true;
         if (leap==true) {
-            if (album.days>0) && album.days<30)
+            if (day>0 && day<30)
             return true;
-        else return false;
         }
-        else {if (album.days>0) && album.days<29)
+        else {if (day>0 && day<29)
             return true;
         else return false;}
         break;
 
 
-case 3 : if (album.days>0) && album.days<=30)
+case 3 : if (day>0 && day<=30)
             return true;
-        else return false;
-         break;
-case 4 : if (album.days>0) && album.days<=31)
+            break;
+case 4 : if (day>0 && day<=31)
             return true;
-        else return false;
-         break;
-case 5 : if (album.days>0) && album.days<=30)
+            break;
+case 5 : if (day>0 && day<=30)
             return true;
-        else return false;
-         break;
-case 6: if (album.days>0) && album.days<=31)
+            break;
+case 6: if (day>0 && day<=31)
             return true;
-        else return false;
-         break;
+            break;
 
-case 7: if (album.days>0) && album.days<=31)
+case 7: if (day>0 && day<=31)
             return true;
-        else return false;
-         break;
-case 8: if (album.days>0) && album.days<=30)
+		break;
+case 8: if (day>0 && day<=30)
             return true;
-        else return false;
-         break;
-case 9: if (album.days>0) && album.days<=31)
+			break;
+case 9: if (day>0 && day<=31)
             return true;
-        else return false;
-         break;
-case 10: if (album.days>0) && album.days<=30)
+			break;
+case 10: if (day>0 && day<=30)
             return true;
-        else return false;
-         break;
-case 11: if (album.days>0) && album.days<=31)
+			break;
+case 11: if (day>0 && day<=31)
             return true;
-        else return false;
-         break;
-case 12: if (album.days>0) && album.days<=31)
+			break;
+case 12: if (day>0 && day<=31)
             return true;
-        else return false;
-         break;
+			break;
 
-
-
-
-
-
+default :  System.out.println("Invalid Date!");
+			return false;
+			
+		  
 }
-}
+
 else return false;
+return false;
+}
 
-
- @Override
+	@Override
 public int compareTo(Date date) {
     if (date.year>year)
-        return true;
+        return -1;
     if (date.year<year)
-        return false;
+        return 1;
     if (date.year==year){
         if (date.month>month)
-            return true;
+            return -1;
         if (date.month<month) 
-            return false;
+            return 1;
         if (date.month==month){
             if (date.day>day)
-                return true;
+                return -1;
             if (date.day<day)
-                return false;
+                return 1;
         }
     }
+    return 0;
 }
+	
+ public String toString() {
+	 return getMonth()+ "/" + getDay() +"/" + getYear();
+ }
+ 
 }
