@@ -30,7 +30,12 @@ public class Date implements Comparable<Date> {
 	public int getYear() {
 		return year;
 	}
-
+	/**
+	 * Sets the year
+	 * 
+	 * 
+	 * 
+	 */
 	public void setYear(int year) {
 		this.year = year;
 	}
@@ -43,7 +48,12 @@ public class Date implements Comparable<Date> {
 	public int getMonth() {
 		return month;
 	}
-
+	/**
+	 * Sets the month
+	 * 
+	 * 
+	 * 
+	 */
 	public void setMonth(int month) {
 		this.month = month;
 	}
@@ -56,7 +66,12 @@ public class Date implements Comparable<Date> {
 	public int getDay() {
 		return day;
 	}
-
+	/**
+	 * Sets the day
+	 * 
+	 * 
+	 * 
+	 */
 	public void setDay(int day) {
 		this.day = day;
 	}
@@ -78,7 +93,12 @@ public class Date implements Comparable<Date> {
 		day = datearray[1];
 		year = datearray[2];
 	} // take “mm/dd/yyyy” and create a Date object
-
+	/**
+	 * Creates a date object from today's date
+	 * 
+	 * 
+	 * 
+	 */
 	public Date() {
 		year = Calendar.getInstance().get(Calendar.YEAR);
 		month = Calendar.getInstance().get(Calendar.MONTH);
