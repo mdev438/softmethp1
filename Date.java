@@ -2,7 +2,18 @@ package p1;
 
 import java.util.StringTokenizer;
 import java.util.Calendar;
-
+	/**
+	 * The Collection class holds the list of albums and the methods that can be
+	 * used to edit the list.
+	 * 
+	 * The Collection class holds methods that can be used to find, add, and remove
+	 * albums in the list. It also holds methods that can be used to lend out and
+	 * return albums to the list. Finally, the Collection class holds methods that
+	 * can print the list of albums in no order, by order of date, and by order of
+	 * genre.
+	 * 
+	 * @author Rohit Krishnan, Moses Devanesan
+	 */
 public class Date implements Comparable<Date> {
 	Calendar c;
 	private int year;
@@ -14,7 +25,12 @@ public class Date implements Comparable<Date> {
 	public static final int the_eightys = 1980;
 	StringTokenizer splitter = null;
 	int[] datearray = new int[3];
-	
+	/**
+	 * Allows us to use the Album attributes from the Date class
+	 * 
+	 * 
+	 * @return The year of the album
+	 */
 	public int getYear() {
 		return year;
 	}
@@ -22,7 +38,12 @@ public class Date implements Comparable<Date> {
 	public void setYear(int year) {
 		this.year = year;
 	}
-
+	/**
+	 * Allows us to use the Album attributes from the Date class
+	 * 
+	 * 
+	 * @return The month of the album
+	 */
 	public int getMonth() {
 		return month;
 	}
@@ -30,7 +51,12 @@ public class Date implements Comparable<Date> {
 	public void setMonth(int month) {
 		this.month = month;
 	}
-
+	/**
+	 * Allows us to use the Album attributes from the Date class
+	 * 
+	 * 
+	 * @return The day of the album
+	 */
 	public int getDay() {
 		return day;
 	}
@@ -39,7 +65,12 @@ public class Date implements Comparable<Date> {
 		this.day = day;
 	}
 
-
+	/**
+	 * Creates a date object from the user given date
+	 * 
+	 * @parameter 
+	 * @return The year of the album
+	 */
 	public Date(String date) {
 		splitter = new StringTokenizer(date);
 
